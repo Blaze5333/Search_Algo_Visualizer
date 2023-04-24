@@ -60,7 +60,7 @@ export default function Jump() {
     }
     else{
       let g=x-1,t1=0;
-      setpointer(arr[g])
+      // setpointer(arr[g])
        while(amt<=arr[g]){
         await sleep(500) 
         g--;
