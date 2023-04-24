@@ -89,8 +89,8 @@ export default function Binary() {
     <div> 
     <h1 className='flex3'>Binary Search</h1>
      <div className='flex2'>
-    <input placeholder='Enter the number' value={val} onChange={handlechange}/>
-    <button onClick={search} >Start Searching</button>
+    <input placeholder='Enter the number' className='btn' value={val} onChange={handlechange}/>
+    <button onClick={search} className='btn' >Start Searching</button>
     </div>
     <h4>* In binary search array should always be arranged in ascending or descending order</h4>
     {found && <h1>Found at postition no. {point} of the array</h1>}

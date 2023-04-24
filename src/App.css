@@ -171,3 +171,29 @@ Link{
     font-size: 10px;
   }
 }
+.slider{
+  margin-left: 20px;
+}
+.horizontal-slider{
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  
+}
+.example-thumb{
+  background-color: #fff;
+}
+.example-track{
+  background-color: blue;
+}
+.btn{
+  height: 40px;
+  margin-right: 5px;
+}
+.flex4{
+  display: flex;
+
+}
+.range{
+  width: 258px
+}

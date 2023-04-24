@@ -63,8 +63,7 @@ export default function Jump() {
       setpointer(arr[g])
        while(amt<=arr[g]){
         await sleep(500) 
-        g--;
-        setpointer(arr[g])
+        
           if(+amt===arr[g]){
             t1=1;
             setj(1);
@@ -72,7 +71,8 @@ export default function Jump() {
             setposition(g);
             break;
           }
-          
+          g--;
+          setpointer(arr[g]);
             
              
           
@@ -97,8 +97,8 @@ export default function Jump() {
     <div>
     <h1 className='flex3'>Jump Search</h1>
     <div className='flex2'>
-    <input placeholder='Enter the number' value={amt} onChange={handlechange}/>
-    <button onClick={search} type='submit' >Start Searching</button>
+    <input placeholder='Enter the number' className='btn' value={amt} onChange={handlechange}/>
+    <button onClick={search} type='submit' className='btn' >Start Searching</button>
     </div>
     <h4>* In Jump search array should always be arranged in ascending or descending order</h4>
     {found && <h1>Found at postition no. {position} of the array</h1>}
