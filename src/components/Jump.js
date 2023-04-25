@@ -6,11 +6,13 @@ export default function Jump() {
     const [position, setposition] = useState()
     const [found, setfound] = useState()
     const [err, seterr] = useState()
-    const [arr, setarr] = useState([1,4,7,8,10,15,20,25,47,50,65,72,100,101,234,250,333])
+    const [arr, setarr] = useState([1,4,6])
     const [j, setj] = useState(0)
     const [pointer, setpointer] = useState()
     const [refresh, setrefresh] = useState()
     const [duration, setduration] = useState()
+    const [arrsize, setarrsize] = useState(3)
+    const arrset=[1,4,6,7,9,20,21,24,29,35,50,42,71,100,101,110,150,159,167,178,180,200,211,271,300,353,553,622,632,789]
     let count=-1
     useEffect(() => {
         setj()
@@ -22,6 +24,15 @@ export default function Jump() {
     }, [refresh])
     const sleep = (time) => {
         return new Promise((resolve) => setTimeout(resolve, time))
+      }
+      const slider=(e)=>{
+        setarrsize(e.target.value)
+        let j=0,arr1=[]
+        for(let i=0;i<+e.target.value;i++){
+           arr1[i]=arrset[j]
+           j++;
+        }
+        setarr(arr1)
       }
     const search=async()=>{ 
       if(refresh===0){
@@ -96,6 +107,11 @@ export default function Jump() {
   return (
     <div>
     <h1 className='flex3'>Jump Search</h1>
+    <h3>Lenght of Array:</h3>
+    <div className='flex4'>
+    <input type='range' className='range' value={arrsize} onChange={slider} min={3} max={30}></input> 
+    <h5>{arrsize}</h5>
+    </div>
     <div className='flex2'>
     <input placeholder='Enter the number' className='btn' value={amt} onChange={handlechange}/>
     <button onClick={search} type='submit' className='btn' >Start Searching</button>
