@@ -12,6 +12,7 @@ import Binary from './components/Binary';
 import Navbar from './components/Navbar';
 import Jump from './components/Jump';
 import Interpolation from './components/Interpolation';
+import Exponential from './components/Exponential';
 function App() {
  
 
@@ -24,6 +25,7 @@ function App() {
         <Route element={<Binary/>} path='/binary'></Route>
         <Route element={<Jump/>} path='/jump'></Route>
         <Route element={<Interpolation/>} path='/interpolation'></Route>
+        <Route element={<Exponential/>} path='/exponential'></Route>
       </Routes>
     </BrowserRouter>
   );

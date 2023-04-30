@@ -13,6 +13,7 @@ export default function Navbar() {
       <button className='navbutton' onClick={()=>{nav('/binary')}}>Binary Search</button>
       <button className='navbutton' onClick={()=>{nav('/jump')}}>Jump Search</button>
       <button className='navbutton' onClick={()=>{nav('/interpolation')}}>Interpolation Search</button>
+      <button className='navbutton' onClick={()=>{nav('/exponential')}}>Exponential Search</button>
     </div>
   )
 }
