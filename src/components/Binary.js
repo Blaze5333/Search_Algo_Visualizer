@@ -14,7 +14,7 @@ export default function Binary() {
     const [arr, setarr] = useState([1,4,6])
     const [duration, setduration] = useState()
     const [arrsize, setarrsize] = useState(3)
-    const arrset=[1,4,6,7,9,20,21,24,29,35,50,42,71,100,101,110,150,159,167,178,180,200,211,271,300,353,553,622,632,789]
+    const arrset=[1,4,6,7,9,20,21,24,29,35,42,50,71,100,101,110,150,159,167,178,180,200,211,271,300,353,553,622,632,789]
     let count=-1
      useEffect(() => {
       setstart()
@@ -75,7 +75,6 @@ export default function Binary() {
             setmid(arr[midposition])
             // setstart(arr[startpos])
             // setend(arr[endpos])
-            setposition(arr[midposition])
             setpoint(midposition)
             setj(1)
             t=1
